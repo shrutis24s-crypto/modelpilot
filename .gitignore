@@ -1,0 +1,11 @@
+@"
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+evaluation_results/
+runs/
+test-results/
+playwright-report/
+"@ | Set-Content .gitignore
