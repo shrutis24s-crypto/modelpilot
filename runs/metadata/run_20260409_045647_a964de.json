@@ -1,0 +1,27 @@
+{
+  "run_id": "run_20260409_045647_a964de",
+  "model": "als_classifier",
+  "version": "e2c024092738",
+  "image_tag": "modelpilot/als_classifier:e2c024092738",
+  "build_source": {
+    "dockerfile": "Dockerfile.generated",
+    "generated": true,
+    "template": null
+  },
+  "timestamp_utc": "2026-04-09T04:56:51.191821+00:00",
+  "input_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\inputs",
+  "output_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260409_045647_a964de",
+  "output_json_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260409_045647_a964de\\output.json",
+  "output_json_exists": true,
+  "gpu_requested": false,
+  "gpu_available": false,
+  "gpu_runtime_ready": false,
+  "gpu_used": false,
+  "gpu_fallback": false,
+  "hardware_device": "cpu",
+  "warning": null,
+  "status": "completed",
+  "exit_code": 0,
+  "duration_seconds": 3.34,
+  "error": null
+}

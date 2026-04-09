@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Instrument Sans', sans-serif;
+
+    /* Developer mode (dark) — default */
+    --background: 210 20% 4%;
+    --foreground: 210 40% 96%;
+    --card: 214 14% 7%;
+    --card-foreground: 210 40% 96%;
+    --popover: 214 14% 7%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 192 100% 61%;
+    --primary-foreground: 210 20% 4%;
+    --secondary: 213 14% 11%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 213 14% 11%;
+    --muted-foreground: 214 14% 58%;
+    --accent: 192 100% 61%;
+    --accent-foreground: 210 20% 4%;
+    --destructive: 0 90% 64%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 136 58% 49%;
+    --success-foreground: 210 20% 4%;
+    --warning: 40 76% 49%;
+    --warning-foreground: 210 20% 4%;
+    --running: 213 94% 67%;
+    --running-foreground: 210 20% 4%;
+    --gpu: 267 90% 71%;
+    --gpu-foreground: 210 20% 4%;
+    --border: 213 14% 15%;
+    --border-bright: 213 12% 21%;
+    --input: 213 14% 15%;
+    --ring: 192 100% 61%;
+    --radius: 0.375rem;
+
+    --surface: 214 14% 7%;
+    --surface-2: 213 14% 11%;
+    --text-ghost: 213 12% 25%;
+
+    --sidebar-bg: 214 14% 7%;
+    --sidebar-border: 213 14% 15%;
+    --sidebar-fg: 214 14% 58%;
+    --sidebar-fg-active: 210 40% 96%;
+    --sidebar-hover: 192 100% 61% / 0.06;
+    --sidebar-active-border: 192 100% 61%;
+
+    --surface-page: 210 20% 4%;
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --accent-glow: 0 0 40px rgba(57, 208, 255, 0.15);
+    --accent-glow-strong: 0 0 20px rgba(57, 208, 255, 0.3);
+  }
+
+  .mode-researcher {
+    --background: 210 24% 96%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 25% 40%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --running: 239 84% 67%;
+    --running-foreground: 0 0% 100%;
+    --gpu: 267 90% 71%;
+    --gpu-foreground: 0 0% 100%;
+    --medical: 187 92% 42%;
+    --border: 214 32% 91%;
+    --border-bright: 213 27% 84%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    --surface: 0 0% 100%;
+    --surface-2: 210 40% 98%;
+    --text-ghost: 215 16% 72%;
+
+    --sidebar-bg: 0 0% 100%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-fg: 215 25% 40%;
+    --sidebar-fg-active: 199 89% 48%;
+    --sidebar-hover: 199 89% 48% / 0.06;
+    --sidebar-active-border: 199 89% 48%;
+
+    --surface-page: 210 24% 96%;
+    --grid-color: rgba(0, 0, 0, 0.02);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Global button tactile feel */
+  button {
+    transition: all 200ms ease;
+  }
+  button:active {
+    transform: scale(0.97);
+  }
+
+  /* Developer scrollbar */
+  :root:not(.mode-researcher) ::-webkit-scrollbar { width: 6px; }
+  :root:not(.mode-researcher) ::-webkit-scrollbar-track { background: #080C10; }
+  :root:not(.mode-researcher) ::-webkit-scrollbar-thumb { background: #21262D; border-radius: 3px; }
+  :root:not(.mode-researcher) ::-webkit-scrollbar-thumb:hover { background: #39D0FF; }
+
+  /* Researcher scrollbar */
+  .mode-researcher ::-webkit-scrollbar { width: 6px; }
+  .mode-researcher ::-webkit-scrollbar-track { background: hsl(210 24% 96%); }
+  .mode-researcher ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+  .mode-researcher ::-webkit-scrollbar-thumb:hover { background: #0EA5E9; }
+}
+
+/* Scanline texture overlay */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.012) 2px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+}
+
+/* Stagger animation children */
+.stagger-fade-up > * {
+  opacity: 0;
+  animation: fade-up 0.5s ease-out forwards;
+}
+.stagger-fade-up > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-fade-up > *:nth-child(2) { animation-delay: 80ms; }
+.stagger-fade-up > *:nth-child(3) { animation-delay: 160ms; }
+.stagger-fade-up > *:nth-child(4) { animation-delay: 240ms; }
+.stagger-fade-up > *:nth-child(5) { animation-delay: 320ms; }
+.stagger-fade-up > *:nth-child(6) { animation-delay: 400ms; }
+
+/* Table row stagger */
+.stagger-rows tr {
+  opacity: 0;
+  animation: fade-up 0.4s ease-out forwards;
+}
+.stagger-rows tr:nth-child(1) { animation-delay: 0ms; }
+.stagger-rows tr:nth-child(2) { animation-delay: 60ms; }
+.stagger-rows tr:nth-child(3) { animation-delay: 120ms; }
+.stagger-rows tr:nth-child(4) { animation-delay: 180ms; }
+.stagger-rows tr:nth-child(5) { animation-delay: 240ms; }
+.stagger-rows tr:nth-child(6) { animation-delay: 300ms; }
+.stagger-rows tr:nth-child(7) { animation-delay: 360ms; }
+.stagger-rows tr:nth-child(8) { animation-delay: 420ms; }
+.stagger-rows tr:nth-child(9) { animation-delay: 480ms; }
+.stagger-rows tr:nth-child(10) { animation-delay: 540ms; }
+
+@layer utilities {
+  .text-gradient-hero {
+    background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Dot grid pattern for researcher */
+.dot-grid-pattern {
+  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+}
+
+/* Shimmer animation for skeletons — wider sweep */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 20%,
+    hsl(var(--muted-foreground) / 0.15) 50%,
+    hsl(var(--muted)) 80%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Fade up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Page entrance — developer */
+@keyframes page-enter-dev {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-enter-dev {
+  animation: page-enter-dev 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Page entrance — researcher (bouncier) */
+@keyframes page-enter-res {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-enter-res {
+  animation: page-enter-res 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Scale fade in */
+@keyframes scale-fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-fade-in {
+  animation: scale-fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Toast slide in */
+@keyframes slide-in-right {
+  from { transform: translateX(100%) scale(0.95); opacity: 0; }
+  to { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Toast progress bar drain */
+@keyframes toast-drain {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.toast-progress-bar {
+  animation: toast-drain 4s linear forwards;
+}
+
+/* Pulse glow for running badge */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(57, 208, 255, 0); }
+  50% { box-shadow: 0 0 8px 2px rgba(57, 208, 255, 0.3); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Green pulse for completed badges */
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
+  50% { box-shadow: 0 0 8px 2px rgba(63, 185, 80, 0.25); }
+}
+.animate-pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+/* Red flash for failed badges */
+@keyframes flash-red {
+  0% { box-shadow: 0 0 0 0 rgba(248, 81, 73, 0); }
+  30% { box-shadow: 0 0 8px 2px rgba(248, 81, 73, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(248, 81, 73, 0); }
+}
+.animate-flash-red {
+  animation: flash-red 1s ease-out forwards;
+}
+
+/* Metric bar fill */
+@keyframes fill-bar {
+  from { width: 0%; }
+}
+
+.animate-fill-bar {
+  animation: fill-bar 0.6s ease-out forwards;
+}
+
+/* Terminal line fade */
+@keyframes line-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-line-fade {
+  animation: line-fade 0.12s ease-out forwards;
+}
+
+/* Dashboard background gradient shift — developer */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.dev-bg-gradient {
+  background: linear-gradient(135deg, #080C10, #0A0F18, #080C10);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Mode selector breathing glow */
+@keyframes breathe-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(57, 208, 255, 0); }
+  50% { box-shadow: 0 0 30px rgba(57, 208, 255, 0.08); }
+}
+.breathe-glow-cyan {
+  animation: breathe-glow 3s ease-in-out infinite;
+}
+
+@keyframes breathe-glow-blue {
+  0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0); }
+  50% { box-shadow: 0 0 30px rgba(14, 165, 233, 0.08); }
+}
+.breathe-glow-blue {
+  animation: breathe-glow-blue 3s ease-in-out infinite;
+}
+
+/* Mode selector mesh gradient background */
+@keyframes mesh-drift {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.mesh-bg {
+  background: radial-gradient(ellipse at 20% 50%, rgba(57,208,255,0.04) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(14,165,233,0.03) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 80%, rgba(139,92,246,0.02) 0%, transparent 50%);
+  background-size: 200% 200%;
+  animation: mesh-drift 20s ease infinite;
+}
+
+/* Sidebar dot pattern */
+.sidebar-dots {
+  background-image: radial-gradient(circle, #21262D 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* JSON syntax highlighting */
+.json-key { color: hsl(var(--foreground)); }
+.json-string { color: hsl(var(--primary)); }
+.json-number { color: hsl(var(--success)); }
+.json-boolean { color: hsl(var(--gpu)); }
+.json-null { color: hsl(var(--muted-foreground)); }
+
+/* Word stagger animation */
+@keyframes word-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-word {
+  opacity: 0;
+  display: inline-block;
+  animation: word-fade-up 0.4s ease-out forwards;
+}

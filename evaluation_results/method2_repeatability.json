@@ -1,0 +1,57 @@
+{
+  "method": "Deterministic Repeatability",
+  "model": "als_classifier",
+  "runs": 5,
+  "all_hashes_identical": true,
+  "hashes": [
+    "e2391685666474972372c0d142eebbae",
+    "e2391685666474972372c0d142eebbae",
+    "e2391685666474972372c0d142eebbae",
+    "e2391685666474972372c0d142eebbae",
+    "e2391685666474972372c0d142eebbae"
+  ],
+  "run_ids": [
+    "run_20260409_035815_0d696a",
+    "run_20260409_035823_a394cd",
+    "run_20260409_035830_ed6a76",
+    "run_20260409_035837_a6e8d1",
+    "run_20260409_035845_139eb4"
+  ],
+  "metrics_per_run": [
+    {
+      "accuracy": 0.9933,
+      "f1_score": 0.9933,
+      "sensitivity": 0.9877,
+      "specificity": 1.0,
+      "loss": 0.0067
+    },
+    {
+      "accuracy": 0.9933,
+      "f1_score": 0.9933,
+      "sensitivity": 0.9877,
+      "specificity": 1.0,
+      "loss": 0.0067
+    },
+    {
+      "accuracy": 0.9933,
+      "f1_score": 0.9933,
+      "sensitivity": 0.9877,
+      "specificity": 1.0,
+      "loss": 0.0067
+    },
+    {
+      "accuracy": 0.9933,
+      "f1_score": 0.9933,
+      "sensitivity": 0.9877,
+      "specificity": 1.0,
+      "loss": 0.0067
+    },
+    {
+      "accuracy": 0.9933,
+      "f1_score": 0.9933,
+      "sensitivity": 0.9877,
+      "specificity": 1.0,
+      "loss": 0.0067
+    }
+  ]
+}

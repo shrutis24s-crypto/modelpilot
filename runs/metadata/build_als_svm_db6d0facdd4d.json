@@ -1,0 +1,15 @@
+{
+  "type": "build",
+  "model": "als_svm",
+  "version": "db6d0facdd4d",
+  "build_context_hash": "db6d0facdd4d",
+  "image_tag": "modelpilot/als_svm:db6d0facdd4d",
+  "build_source": {
+    "dockerfile": "Dockerfile.generated",
+    "generated": true,
+    "template": null
+  },
+  "reused_from_cache": true,
+  "status": "completed",
+  "timestamp_utc": "2026-04-09T03:57:07.564072+00:00"
+}

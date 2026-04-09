@@ -1,0 +1,15 @@
+{
+  "type": "build",
+  "model": "als_classifier",
+  "version": "6ed709ec15a3",
+  "build_context_hash": "6ed709ec15a3",
+  "image_tag": "modelpilot/als_classifier:6ed709ec15a3",
+  "build_source": {
+    "dockerfile": "Dockerfile.template",
+    "generated": false,
+    "template": "als_advanced"
+  },
+  "reused_from_cache": true,
+  "status": "completed",
+  "timestamp_utc": "2026-04-09T04:38:16.310685+00:00"
+}
