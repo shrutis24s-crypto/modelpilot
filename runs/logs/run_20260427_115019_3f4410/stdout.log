@@ -1,0 +1,62 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.0
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+*************************
+** DEPRECATION NOTICE! **
+*************************
+THIS IMAGE IS DEPRECATED and is scheduled for DELETION.
+    https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/support-policy.md
+
+=======================================================
+ModelPilot | ALS Biomarker Classifier (Random Forest)
+=======================================================
+Input  : /app/input/als_data.csv
+Output : /app/output/output.json
+
+Loaded dataset: 150 samples, 32 columns
+Features : 30
+Classes  : {np.int64(0): np.int64(70), np.int64(1): np.int64(80)}
+
+Running 3-Fold Stratified Cross Validation...
+
+  Fold 1: accuracy=1.0000 | sensitivity=1.0000 | specificity=1.0000
+  Fold 2: accuracy=0.9800 | sensitivity=0.9630 | specificity=1.0000
+  Fold 3: accuracy=1.0000 | sensitivity=1.0000 | specificity=1.0000
+
+Overall Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      0.99        70
+           1       1.00      0.99      0.99        80
+
+    accuracy                           0.99       150
+   macro avg       0.99      0.99      0.99       150
+weighted avg       0.99      0.99      0.99       150
+
+=======================================================
+FINAL RESULTS
+=======================================================
+  accuracy            : 0.9933
+  f1_score            : 0.9933
+  sensitivity         : 0.9877
+  specificity         : 1.0
+  loss                : 0.0067
+
+Output saved to /app/output/output.json
+Pipeline complete.

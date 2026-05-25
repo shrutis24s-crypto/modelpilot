@@ -1,0 +1,15 @@
+{
+  "type": "build",
+  "model": "als_fus_real",
+  "version": "d7e687438cec",
+  "build_context_hash": "d7e687438cec",
+  "image_tag": "modelpilot/als_fus_real:d7e687438cec",
+  "build_source": {
+    "dockerfile": "Dockerfile.generated",
+    "generated": true,
+    "template": null
+  },
+  "reused_from_cache": true,
+  "status": "completed",
+  "timestamp_utc": "2026-04-27T12:17:56.158895+00:00"
+}

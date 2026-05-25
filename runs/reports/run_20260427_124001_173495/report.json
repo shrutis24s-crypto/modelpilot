@@ -1,0 +1,26 @@
+{
+  "report_type": "single_run",
+  "generated_at_utc": "2026-04-27T12:40:07.327417+00:00",
+  "run_id": "run_20260427_124001_173495",
+  "model": "als_classifier",
+  "version": "e2c024092738",
+  "status": "completed",
+  "duration_seconds": 3.506,
+  "hardware_device": "cpu",
+  "task_type": "classification",
+  "score": 0.793,
+  "metrics": {
+    "accuracy": 0.9933,
+    "f1": 0.9933,
+    "recall": 0.9877,
+    "specificity": 1.0,
+    "loss": 0.0067
+  },
+  "warnings": [
+    "Missing metric: precision"
+  ],
+  "report_files": {
+    "json": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\run_20260427_124001_173495\\report.json",
+    "plot": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\run_20260427_124001_173495\\metrics.png"
+  }
+}

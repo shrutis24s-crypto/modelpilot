@@ -1,0 +1,77 @@
+{
+  "report_type": "comparison",
+  "generated_at_utc": "2026-04-27T12:40:52.303331+00:00",
+  "run_ids": [
+    "run_20260427_120520_e55143",
+    "run_20260427_121756_f3e967",
+    "run_20260409_035707_e47899"
+  ],
+  "shared_metrics": [
+    "accuracy",
+    "f1",
+    "loss",
+    "recall",
+    "specificity"
+  ],
+  "pairwise_differences_first_two_runs": {
+    "accuracy": 0.3162,
+    "f1": 0.3247,
+    "loss": -0.3162,
+    "recall": 0.3273,
+    "specificity": 0.3063
+  },
+  "insights_first_two_runs": [
+    "Model A achieves higher accuracy.",
+    "Model A has higher recall, indicating stronger positive-case detection.",
+    "Model A has the better F1-score balance between precision and recall.",
+    "For ALS-focused use, Model A may be preferable due to higher sensitivity."
+  ],
+  "ranking": [
+    {
+      "run_id": "run_20260409_035707_e47899",
+      "model": "als_svm",
+      "version": "db6d0facdd4d",
+      "score": 0.7966,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 1.0,
+        "specificity": 0.9855,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_120520_e55143",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_121756_f3e967",
+      "model": "als_fus_real",
+      "version": "d7e687438cec",
+      "score": 0.5345,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.6771,
+        "recall": 0.6604,
+        "specificity": 0.6937,
+        "f1": 0.6686,
+        "loss": 0.3229
+      }
+    }
+  ],
+  "report_files": {
+    "json": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260427_120520_e55143__run_20260427_121756_f3e967__run_20260409_035707_e47899\\comparison.json",
+    "plot": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260427_120520_e55143__run_20260427_121756_f3e967__run_20260409_035707_e47899\\comparison.png"
+  }
+}

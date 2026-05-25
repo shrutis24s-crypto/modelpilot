@@ -1,0 +1,27 @@
+{
+  "run_id": "run_20260427_081211_5941b7",
+  "model": "als_svm",
+  "version": "db6d0facdd4d",
+  "image_tag": "modelpilot/als_svm:db6d0facdd4d",
+  "build_source": {
+    "dockerfile": "Dockerfile.generated",
+    "generated": true,
+    "template": null
+  },
+  "timestamp_utc": "2026-04-27T08:12:12.854737+00:00",
+  "input_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\inputs",
+  "output_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_081211_5941b7",
+  "output_json_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_081211_5941b7\\output.json",
+  "output_json_exists": true,
+  "gpu_requested": false,
+  "gpu_available": false,
+  "gpu_runtime_ready": false,
+  "gpu_used": false,
+  "gpu_fallback": false,
+  "hardware_device": "cpu",
+  "warning": null,
+  "status": "completed",
+  "exit_code": 0,
+  "duration_seconds": 1.827,
+  "error": null
+}

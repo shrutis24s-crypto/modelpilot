@@ -1,0 +1,27 @@
+{
+  "run_id": "run_20260427_115019_3f4410",
+  "model": "als_classifier",
+  "version": "6ed709ec15a3",
+  "image_tag": "modelpilot/als_classifier:6ed709ec15a3",
+  "build_source": {
+    "dockerfile": "Dockerfile.template",
+    "generated": false,
+    "template": "als_advanced"
+  },
+  "timestamp_utc": "2026-04-27T11:50:27.573801+00:00",
+  "input_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\inputs",
+  "output_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_115019_3f4410",
+  "output_json_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_115019_3f4410\\output.json",
+  "output_json_exists": true,
+  "gpu_requested": true,
+  "gpu_available": false,
+  "gpu_runtime_ready": false,
+  "gpu_used": false,
+  "gpu_fallback": true,
+  "hardware_device": "cpu",
+  "warning": "GPU requested but not available. Falling back to CPU.",
+  "status": "completed",
+  "exit_code": 0,
+  "duration_seconds": 8.133,
+  "error": null
+}

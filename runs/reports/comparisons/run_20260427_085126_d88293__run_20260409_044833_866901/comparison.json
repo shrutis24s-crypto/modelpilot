@@ -1,0 +1,59 @@
+{
+  "report_type": "comparison",
+  "generated_at_utc": "2026-04-27T11:52:51.450465+00:00",
+  "run_ids": [
+    "run_20260427_085126_d88293",
+    "run_20260409_044833_866901"
+  ],
+  "shared_metrics": [
+    "accuracy",
+    "f1",
+    "loss",
+    "recall",
+    "specificity"
+  ],
+  "pairwise_differences_first_two_runs": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "loss": 0.0,
+    "recall": 0.0,
+    "specificity": 0.0
+  },
+  "insights_first_two_runs": [
+    "No major differences could be inferred from the shared metrics."
+  ],
+  "ranking": [
+    {
+      "run_id": "run_20260427_085126_d88293",
+      "model": "als_fus_real",
+      "version": "d7e687438cec",
+      "score": 0.5345,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.6771,
+        "recall": 0.6604,
+        "specificity": 0.6937,
+        "f1": 0.6686,
+        "loss": 0.3229
+      }
+    },
+    {
+      "run_id": "run_20260409_044833_866901",
+      "model": "als_fus_real",
+      "version": "d7e687438cec",
+      "score": 0.5345,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.6771,
+        "recall": 0.6604,
+        "specificity": 0.6937,
+        "f1": 0.6686,
+        "loss": 0.3229
+      }
+    }
+  ],
+  "report_files": {
+    "json": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260427_085126_d88293__run_20260409_044833_866901\\comparison.json",
+    "plot": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260427_085126_d88293__run_20260409_044833_866901\\comparison.png"
+  }
+}

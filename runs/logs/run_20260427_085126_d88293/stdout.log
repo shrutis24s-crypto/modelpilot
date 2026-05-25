@@ -1,0 +1,128 @@
+============================================================
+ModelPilot | ALS FUS Biomarker Classification
+Real-world ALS research pipeline
+============================================================
+Input  : /app/input/processed_FUSdata.csv
+Output : /app/output
+
+Loaded dataset: 960 samples, 149 columns
+                       Image  ...  Diagnosis
+0  Case4_FUS_BA4_GM_NVA1.png  ...        1.0
+1  Case4_FUS_BA4_GM_NVA2.png  ...        1.0
+
+[2 rows x 149 columns]
+
+Removed columns: ['avg_dist_of_2+_to_2+', 'avg_dist_of_3+_to_3+', 'avg_dist_of_1+_to_1+', 'avg_dist_of_Negative_to_Negative']
+Filtered Data - First 2 rows:
+                       Image  ...  Diagnosis
+0  Case4_FUS_BA4_GM_NVA1.png  ...        1.0
+1  Case4_FUS_BA4_GM_NVA2.png  ...        1.0
+
+[2 rows x 145 columns]
+
+Removed collinear columns (|r| >= 0.95): 74 columns
+
+Features after preparation: 69
+Class distribution:
+Diagnosis
+1.0    480
+0.0    480
+Name: count, dtype: int64
+
+============================================================
+Random Forest — 3-Fold Cross Validation
+============================================================
+
+Average Accuracy across 3 folds: 0.68 (+/- 0.08)
+Average Sensitivity across 3 folds: 0.66 (+/- 0.11)
+Average Specificity across 3 folds: 0.69 (+/- 0.07)
+Individual Fold Accuracies: [0.65625, 0.73125, 0.64375]
+Individual Fold Sensitivities: [0.6, 0.7375, 0.64375]
+Individual Fold Specificities: [0.7125, 0.725, 0.64375]
+
+Overall Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       0.67      0.69      0.68       480
+         1.0       0.68      0.66      0.67       480
+
+    accuracy                           0.68       960
+   macro avg       0.68      0.68      0.68       960
+weighted avg       0.68      0.68      0.68       960
+
+
+Shapiro-Wilk Test for Accuracy Normality:
+Statistic: 0.8547
+p-value: 0.2530
+Note: p-value >= 0.05 suggests the accuracies are normally distributed.
+
+p-value for Random Forest accuracy: 0.0115
+t-statistic: 6.4812
+
+============================================================
+SVM — 3-Fold Cross Validation
+============================================================
+
+Average Accuracy across 3 folds: 0.67 (+/- 0.05)
+Average Sensitivity across 3 folds: 0.67 (+/- 0.05)
+Average Specificity across 3 folds: 0.66 (+/- 0.12)
+Individual Fold Accuracies: [0.684375, 0.68125, 0.634375]
+Individual Fold Sensitivities: [0.7, 0.6375, 0.6875]
+Individual Fold Specificities: [0.66875, 0.725, 0.58125]
+
+Overall Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       0.67      0.66      0.66       480
+         1.0       0.66      0.68      0.67       480
+
+    accuracy                           0.67       960
+   macro avg       0.67      0.67      0.67       960
+weighted avg       0.67      0.67      0.67       960
+
+
+Shapiro-Wilk Test for Accuracy Normality:
+Statistic: 0.7967
+p-value: 0.1066
+
+p-value for SVM accuracy: 0.0046
+t-statistic: 10.3065
+
+============================================================
+Logistic Regression — 3-Fold Cross Validation
+============================================================
+
+Average Accuracy across 3 folds: 0.65 (+/- 0.05)
+Average Sensitivity across 3 folds: 0.66 (+/- 0.05)
+Average Specificity across 3 folds: 0.65 (+/- 0.11)
+Individual Fold Accuracies: [0.671875, 0.66875, 0.621875]
+Individual Fold Sensitivities: [0.6875, 0.625, 0.6625]
+Individual Fold Specificities: [0.65625, 0.7125, 0.58125]
+
+Overall Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       0.66      0.65      0.65       480
+         1.0       0.65      0.66      0.66       480
+
+    accuracy                           0.65       960
+   macro avg       0.65      0.65      0.65       960
+weighted avg       0.65      0.65      0.65       960
+
+
+Shapiro-Wilk Test for Accuracy Normality:
+Statistic: 0.7967
+p-value: 0.1066
+
+p-value for Logistic Regression accuracy: 0.0054
+t-statistic: 9.5335
+
+============================================================
+PIPELINE COMPLETE
+============================================================
+Output saved to /app/output/output.json
+
+Summary:
+  Random Forest  — accuracy: 0.6771  sensitivity: 0.6604  specificity: 0.6937
+  SVM            — accuracy: 0.6667  sensitivity: 0.6750  specificity: 0.6583
+  Logistic Reg.  — accuracy: 0.6542  sensitivity: 0.6583  specificity: 0.6500

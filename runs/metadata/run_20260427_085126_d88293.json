@@ -1,0 +1,27 @@
+{
+  "run_id": "run_20260427_085126_d88293",
+  "model": "als_fus_real",
+  "version": "d7e687438cec",
+  "image_tag": "modelpilot/als_fus_real:d7e687438cec",
+  "build_source": {
+    "dockerfile": "Dockerfile.generated",
+    "generated": true,
+    "template": null
+  },
+  "timestamp_utc": "2026-04-27T08:51:33.011240+00:00",
+  "input_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\inputs\\fus_data",
+  "output_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_085126_d88293",
+  "output_json_path": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\outputs\\run_20260427_085126_d88293\\output.json",
+  "output_json_exists": true,
+  "gpu_requested": false,
+  "gpu_available": false,
+  "gpu_runtime_ready": false,
+  "gpu_used": false,
+  "gpu_fallback": false,
+  "hardware_device": "cpu",
+  "warning": null,
+  "status": "completed",
+  "exit_code": 0,
+  "duration_seconds": 6.717,
+  "error": null
+}

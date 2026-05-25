@@ -1,0 +1,104 @@
+{
+  "report_type": "comparison",
+  "generated_at_utc": "2026-04-27T08:34:38.874551+00:00",
+  "run_ids": [
+    "run_20260409_035651_ab0dfe",
+    "run_20260427_082835_4969c1",
+    "run_20260427_082024_ac365e",
+    "run_20260427_082020_527ea6",
+    "run_20260427_081304_f6d3a3"
+  ],
+  "shared_metrics": [
+    "accuracy",
+    "f1",
+    "loss",
+    "recall",
+    "specificity"
+  ],
+  "pairwise_differences_first_two_runs": {
+    "accuracy": 0.0,
+    "f1": 0.0,
+    "loss": 0.0,
+    "recall": 0.0,
+    "specificity": 0.0
+  },
+  "insights_first_two_runs": [
+    "No major differences could be inferred from the shared metrics."
+  ],
+  "ranking": [
+    {
+      "run_id": "run_20260409_035651_ab0dfe",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_082835_4969c1",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_082024_ac365e",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_082020_527ea6",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    },
+    {
+      "run_id": "run_20260427_081304_f6d3a3",
+      "model": "als_classifier",
+      "version": "e2c024092738",
+      "score": 0.793,
+      "task_type": "classification",
+      "metrics": {
+        "accuracy": 0.9933,
+        "f1": 0.9933,
+        "recall": 0.9877,
+        "specificity": 1.0,
+        "loss": 0.0067
+      }
+    }
+  ],
+  "report_files": {
+    "json": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260409_035651_ab0dfe__run_20260427_082835_4969c1__run_20260427_082024_ac365e__run_20260427_082020_527ea6__run_20260427_081304_f6d3a3\\comparison.json",
+    "plot": "C:\\Users\\shrut\\Desktop\\modelpilot\\runs\\reports\\comparisons\\run_20260409_035651_ab0dfe__run_20260427_082835_4969c1__run_20260427_082024_ac365e__run_20260427_082020_527ea6__run_20260427_081304_f6d3a3\\comparison.png"
+  }
+}
